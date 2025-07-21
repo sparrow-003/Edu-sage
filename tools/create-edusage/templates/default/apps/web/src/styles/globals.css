@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* Color variables */
+    --color-primary: 6, 182, 212;
+    /* cyan-500 */
+    --color-secondary: 79, 70, 229;
+    /* indigo-600 */
+    --color-background: 17, 24, 39;
+    /* gray-900 */
+    --color-surface: 31, 41, 55;
+    /* gray-800 */
+    --color-text: 255, 255, 255;
+    --color-text-secondary: 156, 163, 175;
+    /* gray-400 */
+    --color-border: 55, 65, 81;
+    /* gray-700 */
+
+    /* Animation variables */
+    --animation-fast: 0.2s;
+    --animation-normal: 0.3s;
+    --animation-slow: 0.5s;
+
+    /* Spacing variables */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    /* Shadow variables */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Base styles */
+html,
+body {
+    @apply bg-gray-900 text-white;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+}
+
+/* Focus styles */
+:focus {
+    @apply outline-none ring-2 ring-cyan-500 ring-opacity-50;
+}
+
+/* Animations */
+@keyframes pulse-cyan {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-pulse-cyan {
+    animation: pulse-cyan 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Utility classes */
+.text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500;
+}
+
+.bg-glass {
+    @apply bg-gray-800 bg-opacity-80 backdrop-blur-sm;
+}
+
+.border-glow {
+    box-shadow: 0 0 5px rgba(6, 182, 212, 0.5), 0 0 10px rgba(6, 182, 212, 0.3);
+}
+
+/* Error fallback styles */
+.error-fallback {
+    @apply fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-90 z-50;
+}
+
+.error-container {
+    @apply bg-gray-800 rounded-lg p-6 max-w-md w-full shadow-xl border border-red-500;
+}
+
+.error-message {
+    @apply mt-4 text-red-400 bg-gray-900 p-4 rounded-md overflow-auto max-h-40;
+}
+
+.error-actions {
+    @apply mt-6 flex justify-end space-x-4;
+}
+
+.retry-button {
+    @apply px-4 py-2 bg-cyan-600 text-white rounded-md hover:bg-cyan-500 transition-colors;
+}
+
+.report-button {
+    @apply px-4 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 transition-colors;
+}

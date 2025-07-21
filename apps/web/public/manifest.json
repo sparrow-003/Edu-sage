@@ -1,0 +1,88 @@
+{
+    "name": "EduΣage AI Powered by SOCIA - AI Learning Companion",
+    "short_name": "EduΣage",
+    "description": "100-million-user, AI-native learning companion that treats every learner as its sole priority",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0ea5e9",
+    "theme_color": "#0ea5e9",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable any"
+        }
+    ],
+    "categories": [
+        "education",
+        "productivity",
+        "utilities"
+    ],
+    "lang": "en",
+    "dir": "ltr",
+    "scope": "/",
+    "prefer_related_applications": false,
+    "shortcuts": [
+        {
+            "name": "Start Learning",
+            "short_name": "Learn",
+            "description": "Jump straight into a learning session",
+            "url": "/?mode=teach",
+            "icons": [
+                {
+                    "src": "/icon-192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "Take Quiz",
+            "short_name": "Quiz",
+            "description": "Test your knowledge with adaptive quizzes",
+            "url": "/?mode=quiz",
+            "icons": [
+                {
+                    "src": "/icon-192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "View Plan",
+            "short_name": "Plan",
+            "description": "Check your learning roadmap",
+            "url": "/?mode=plan",
+            "icons": [
+                {
+                    "src": "/icon-192.png",
+                    "sizes": "192x192"
+                }
+            ]
+  
+  "share_target": {
+                "action": are",": "POST",
+                ": "multipart/form-data","params": {
+                    "title": "title",
+                    "text": "text",
+                    "url": "url",
+                    "files": [
+                        {
+                            "name": "files",
+                            "accept": [
+                                "text/*",
+                                "image/*",
+                                "application/pdf"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }

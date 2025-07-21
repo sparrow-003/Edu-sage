@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./config/docker/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - database
+    restart: always
+    volumes:
+      - ./apps/web:/app/apps/web
+      - ./packages:/app/packages
+      - ./node_modules:/app/node_modules
+
+  database:
+    image: postgres:15
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=edusage
+      - POSTGRES_PASSWORD=edusage_password
+      - POSTGRES_DB=edusage_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

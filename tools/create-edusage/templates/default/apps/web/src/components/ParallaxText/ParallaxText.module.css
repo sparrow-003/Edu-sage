@@ -1,0 +1,30 @@
+.parallax {
+    overflow: hidden;
+    letter-spacing: -2px;
+    line-height: 1.2;
+    margin: 0;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.scroller {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 64px;
+    display: flex;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.text {
+    color: #fff;
+    text-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+}
+
+@media (max-width: 768px) {
+    .scroller {
+        font-size: 48px;
+    }
+}
